@@ -9,45 +9,46 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.korshreddern.a16fragmentsimple.fragment.MyFirstFragment;
-import com.example.korshreddern.a16fragmentsimple.fragment.MySecondFragment;
-import com.example.korshreddern.a16fragmentsimple.fragment.MyThirdFragment;
+import com.example.korshreddern.a16fragmentsimple.mainfragment.MainFirstFragment;
+import com.example.korshreddern.a16fragmentsimple.mainfragment.MainSecondFragment;
+import com.example.korshreddern.a16fragmentsimple.mainfragment.MainThirdFragment;
+import com.example.korshreddern.a16fragmentsimple.addfragment.AddFragmentActivity;
 import com.example.korshreddern.a16fragmentsimple.viewpager.ViewPagerActivity;
 
 public class MainActivity extends AppCompatActivity {
     Fragment firstFragment;
-    MyFirstFragment myFirstFragment;
-    MySecondFragment mySecondFragment;
-    MyThirdFragment myThirdFragment;
+    MainFirstFragment mainFirstFragment;
+    MainSecondFragment mainSecondFragment;
+    MainThirdFragment mainThirdFragment;
 
-    Button btnGotoPager;
-    Button btnGotoTransaction;
+    Button btnGotoViewPager;
+    Button btnGotoAddFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initButton();
+        initMenuButton();
         initFirstFragment();
         initSecondFragment();
         initThirdFragment();
     }
 
-    private void initButton() {
-        btnGotoPager = (Button) findViewById(R.id.btn_goto_pager);
-        btnGotoPager.setOnClickListener(new View.OnClickListener() {
+    private void initMenuButton() {
+        btnGotoViewPager = (Button) findViewById(R.id.btn_goto_view_pager);
+        btnGotoViewPager.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ViewPagerActivity.class);
                 startActivity(intent);
             }
         });
-        btnGotoTransaction = (Button) findViewById(R.id.btn_goto_transaction);
-        btnGotoTransaction.setOnClickListener(new View.OnClickListener() {
+        btnGotoAddFragment = (Button) findViewById(R.id.btn_goto_add_fragment);
+        btnGotoAddFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TransactActivity.class);
+                Intent intent = new Intent(MainActivity.this, AddFragmentActivity.class);
                 startActivity(intent);
             }
         });
@@ -59,24 +60,24 @@ public class MainActivity extends AppCompatActivity {
      * */
     private void initFirstFragment() {
         firstFragment = getSupportFragmentManager().findFragmentById(R.id.fm_my_first);
-        myFirstFragment = (MyFirstFragment) firstFragment;
+        mainFirstFragment = (MainFirstFragment) firstFragment;
     }
 
     /**
      * Dynamically Fragment
      * */
     private void initSecondFragment() {
-        mySecondFragment = MySecondFragment.newInstance(getString(R.string.second_fragment_description));
+        mainSecondFragment = MainSecondFragment.newInstance(getString(R.string.second_fragment_description));
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.container_second_fragment, mySecondFragment);
+        fragmentTransaction.replace(R.id.container_second_fragment, mainSecondFragment);
         fragmentTransaction.commit();
     }
 
     private void initThirdFragment() {
-        myThirdFragment = MyThirdFragment.newInstance(getString(R.string.third_fragment_title), getString(R.string.third_fragment_description));
+        mainThirdFragment = MainThirdFragment.newInstance(getString(R.string.third_fragment_title), getString(R.string.third_fragment_description));
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.container_third_fragment, myThirdFragment);
+        fragmentTransaction.replace(R.id.container_third_fragment, mainThirdFragment);
         fragmentTransaction.commit();
     }
 }

@@ -1,6 +1,5 @@
-package com.example.korshreddern.a16fragmentsimple.fragment;
+package com.example.korshreddern.a16fragmentsimple.mainfragment;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,12 +13,12 @@ import com.example.korshreddern.a16fragmentsimple.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link MyThirdFragment.OnFragmentInteractionListener} interface
+ * {@link MainThirdFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link MyThirdFragment#newInstance} factory method to
+ * Use the {@link MainThirdFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyThirdFragment extends Fragment {
+public class MainThirdFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String KEY_STRING_1 = "key_title";
@@ -31,7 +30,7 @@ public class MyThirdFragment extends Fragment {
 
 //    private OnFragmentInteractionListener mListener;
 
-    public MyThirdFragment() {
+    public MainThirdFragment() {
         // Required empty public constructor
     }
 
@@ -41,16 +40,16 @@ public class MyThirdFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MyThirdFragment.
+     * @return A new instance of fragment MainThirdFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static MyThirdFragment newInstance(String param1, String param2) {
-        MyThirdFragment myThirdFragment = new MyThirdFragment();
+    public static MainThirdFragment newInstance(String param1, String param2) {
+        MainThirdFragment mainThirdFragment = new MainThirdFragment();
         Bundle bundle = new Bundle();
         bundle.putString(KEY_STRING_1, param1);
         bundle.putString(KEY_STRING_2, param2);
-        myThirdFragment.setArguments(bundle);
-        return myThirdFragment;
+        mainThirdFragment.setArguments(bundle);
+        return mainThirdFragment;
     }
 
     @Override
@@ -66,7 +65,7 @@ public class MyThirdFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_third, container, false);
+        return inflater.inflate(R.layout.fragment_main_third, container, false);
     }
 
     @Override

@@ -2,19 +2,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/my_little_green"
+    android:background="@color/my_light_blue"
     android:orientation="vertical"
-    tools:context="com.example.korshreddern.a16fragmentsimple.fragment.MyThirdFragment">
+    tools:context=".mainfragment.MainFirstFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/first_fragment_title" />
 
     <TextView
         android:id="@+id/tv_description"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/first_fragment_description" />
 
 </LinearLayout>

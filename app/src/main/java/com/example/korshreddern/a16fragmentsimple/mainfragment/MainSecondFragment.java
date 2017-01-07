@@ -1,4 +1,4 @@
-package com.example.korshreddern.a16fragmentsimple.fragment;
+package com.example.korshreddern.a16fragmentsimple.mainfragment;
 
 
 import android.os.Bundle;
@@ -14,21 +14,21 @@ import com.example.korshreddern.a16fragmentsimple.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MySecondFragment extends Fragment {
+public class MainSecondFragment extends Fragment {
 
     private static final String KEY_MESSAGE = "message";
     String message;
 
-    public MySecondFragment() {
+    public MainSecondFragment() {
         // Required empty public constructor
     }
 
-    public static MySecondFragment newInstance(String message) {
-        MySecondFragment mySecondFragment = new MySecondFragment();
+    public static MainSecondFragment newInstance(String message) {
+        MainSecondFragment mainSecondFragment = new MainSecondFragment();
         Bundle bundle = new Bundle();
         bundle.putString(KEY_MESSAGE, message);
-        mySecondFragment.setArguments(bundle);
-        return mySecondFragment;
+        mainSecondFragment.setArguments(bundle);
+        return mainSecondFragment;
     }
 
     @Override
@@ -43,7 +43,7 @@ public class MySecondFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_my_second, container, false);
+        return inflater.inflate(R.layout.fragment_main_second, container, false);
     }
 
     @Override

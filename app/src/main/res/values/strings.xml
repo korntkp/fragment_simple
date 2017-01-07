@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">16 Fragment Simple</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Menu -->
+    <string name="goto_view_pager">View Pager</string>
+    <string name="goto_add_fragment">Add Fragment</string>
+    <string name="goto_replace_fragment">Replace Fragment</string>
+
     <string name="first_fragment_title">Hello blank FIRST</string>
     <string name="first_fragment_description">This is Static Fragment</string>
     <string name="second_fragment_title">Hello blank SECOND fragment</string>
@@ -9,8 +13,10 @@
     <string name="third_fragment_title">Hello blank THIRD fragment</string>
     <string name="third_fragment_description">This is Dynamic Fragment</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tv_fragment_one">Fragment One</string>
+    <string name="tv_fragment_two">Fragment Two</string>
+    <string name="tv_fragment_three">Fragment Three</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="goto_view_pager">Goto View Pager</string>
-    <string name="goto_transaction">Goto Transact F</string>
+    <string name="btn_close">Close</string>
 </resources>

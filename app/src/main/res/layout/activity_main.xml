@@ -9,20 +9,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.korshreddern.a16fragmentsimple.MainActivity">
 
-    <TextView
-        android:id="@+id/tv_hello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-
     <fragment
         android:id="@+id/fm_my_first"
-        android:name="com.example.korshreddern.a16fragmentsimple.fragment.MyFirstFragment"
+        android:name="com.example.korshreddern.a16fragmentsimple.mainfragment.MainFirstFragment"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/tv_hello"
+        android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        tools:layout="@layout/fragment_my_first" />
+        tools:layout="@layout/fragment_main_first" />
 
     <FrameLayout
         android:id="@+id/container_second_fragment"
@@ -36,21 +30,45 @@
         android:layout_height="100dp"
         android:layout_below="@id/container_second_fragment" />
 
-    <Button
-        android:id="@+id/btn_goto_pager"
+    <TextView
+        android:id="@+id/tv_hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="@string/goto_view_pager" />
+        android:layout_above="@+id/layout_menu"
+        android:text="Menu" />
 
-    <Button
-        android:id="@+id/btn_goto_transaction"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@id/layout_menu"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="@string/goto_transaction" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_goto_add_fragment"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/goto_add_fragment" />
+
+        <Button
+            android:id="@+id/btn_goto_replace_fragment"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/goto_replace_fragment" />
+
+        <Button
+            android:id="@+id/btn_goto_view_pager"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/goto_view_pager" />
+
+    </LinearLayout>
 </RelativeLayout>
