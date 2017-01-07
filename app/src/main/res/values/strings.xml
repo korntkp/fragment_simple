@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">16 Fragment Simple</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="first_fragment_title">Hello blank FIRST</string>
+    <string name="first_fragment_description">This is Static Fragment</string>
+    <string name="second_fragment_title">Hello blank SECOND fragment</string>
+    <string name="second_fragment_description">This is Dynamic Fragment</string>
+    <string name="third_fragment_title">Hello blank THIRD fragment</string>
+    <string name="third_fragment_description">This is Dynamic Fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="goto_view_pager">Goto View Pager</string>
+    <string name="goto_transaction">Goto Transact F</string>
+</resources>
