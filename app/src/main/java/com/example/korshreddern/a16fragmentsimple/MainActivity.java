@@ -13,6 +13,7 @@ import com.example.korshreddern.a16fragmentsimple.mainfragment.MainFirstFragment
 import com.example.korshreddern.a16fragmentsimple.mainfragment.MainSecondFragment;
 import com.example.korshreddern.a16fragmentsimple.mainfragment.MainThirdFragment;
 import com.example.korshreddern.a16fragmentsimple.addfragment.AddFragmentActivity;
+import com.example.korshreddern.a16fragmentsimple.replacefragment.ReplaceFragmentActivity;
 import com.example.korshreddern.a16fragmentsimple.viewpager.ViewPagerActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnGotoViewPager;
     Button btnGotoAddFragment;
+    Button btnGotoReplaceFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddFragmentActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnGotoReplaceFragment = (Button) findViewById(R.id.btn_goto_replace_fragment);
+        btnGotoReplaceFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ReplaceFragmentActivity.class);
                 startActivity(intent);
             }
         });

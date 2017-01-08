@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".viewpager.ViewPagerActivity" />
-        <activity android:name=".addfragment.AddFragmentActivity"></activity>
+        <activity android:name=".addfragment.AddFragmentActivity" />
+        <activity android:name=".replacefragment.ReplaceFragmentActivity" />
     </application>
 
 </manifest>
